@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 1 Task</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    
+  
+  </head>
+  <body>
+     <!-- First Task Start -->
+    <!-- Header Title  -->
+      <header class="title">
+        <h1 class="title" style="color: white;"><b class="title">Day 1</b> - Task</h1>
+      </header>
+    
+    <!-- Question 1 (Start) -->
+    <article id="question1">
+        <h2 class="head1"><em style="color: white;">#1</em>
+          <u>Write a Blog on the Difference b/w HTTP 1.1</u> vs <u>HTTP 2</u>
+        </h2>
+        <!-- Sub topic 1 -start -->
+        <section class="session1">
+          <h3>HTTP</h3>
+
+          <div class="container">
+            <ul class="myUL">
+              <li>
+                HTTP is the short form of
+                <span>Hypertext Transfer Protocol.</span>
+              </li>
+              <li>Developed by <span>Timothy Berners-Lee</span></li>
+              <li>
+                It is the foundation for World Wide Web and its invention in
+                <span>1989.</span>
+              </li>
+              <li>
+                It is used by browers in order to load <span>web</span> pages
+              </li>
+            </ul>
+          </div>
+
+          <div class="container">
+            <h4><b>Example:</b></h4>
+
+            <ul class="myUL">
+              <li>
+                Client browser sends HTTP request to web server once we enter
+                URL such as
+                <a href="http://swasticblog.com/" target="_blank"
+                    ><span
+                    >http://swasticblog.com</a
+                  ></span
+                >
+              </li>
+              <li>
+                The web browser sends an HTTP response to the client with the
+                contents of the webpage.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- Sub topic 1 -End -->
+        <!-- Sub Topic 2 - Start -->
+        <section class="section2">
+            <h3>HTTP 1 Protocol</h3>
+            <div class="container">
+                <ul>
+                    <li>It had official recognition in <span>1996</span></li>
+                    <li>HTTP methods are <span>Get, Put </span>or<span> Post.</span></li>
+                    <li>It used text-based commands for HTTP requests.</li>
+                    <li>Request targets such as <span>URL</span> or<span> Port</span> are used.</li>
+                    <li>The new response headers allowed <span>multiple file </span>types.</li>
+                </ul>
+                <img src="https://cloudyforsure.com/wp-content/uploads/2021/03/http1.png" alt="http 1 Protocol">
+                <div class="container">
+                    <h4><b>Example:</b></h4>
+                <ul style="list-style-type:circle">
+                    <li>Plain Text</li>
+                    <li>HTML</li>
+                    <li>Images</li>
+                    <li>Sound</li>
+                    <li>Video</li>
+                    <li>Other Mulitmedia File</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Sub Topic 2 - End -->
+        <!-- Sub Topic 3 - Start -->
+        <section class="section3">
+            <h3>HTTP 1.1 Protocol</h3>
+            <div class="container">
+                <ul class="myUL">
+                    <li>It was released in <span> 1997.</span></li>
+                    <li>As we can see in HTTP 1 <span>implementation,</span> one major problem was that connection needed to be established ater each request.</li>
+                    <li>To solve this problem HTTP 1.1 came up with a keep-alive concept that helped to send <span> multiple requests </span>over a single connection.</li>
+                </ul>
+                <img src="https://cloudyforsure.com/wp-content/uploads/2021/03/1-1.png" alt="http 1.1 Protocol">
+                <ul>
+                    <li>It can load <span>one request</span> at a time.</li>
+                    <li>Hence
+                         one request per one <span> TCP -</span> Transmission Control Protocol connection is possible.
+                    </li>
+                    <li>It added many performance <span>enhancements.</span></li>
+                </ul>
+
+                <div class="container">
+                    <h4><b>Example:</b></h4>
+                <ul style="list-style-type:circle">
+                    <li>Caching</li>
+                    <li>Request Pipelining</li>
+                    <li>Head-of-Line Blocking</li>
+                    <li>Keepalive Connections</li>
+                    <li>Transfer-Encoding</li>
+                    <li>Byte-Range Requests</li>
+                </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Sub topic 3 - End -->
+        <!-- Sub topic 4 - Start -->
+        <section class="section4">
+          <h3>HTTP 2 Protocol</h3>
+          <div class="container">
+              <ul class="myUL">
+                <li>It was released in <span>Feb.2015</span> by Internet Engineering Task Force- <span>(IETE).</span></li>
+                <li>It was the <span>second major</span> version of the most useful internet protocol,HTTP.</li>
+                <li>It was derived from the earlier experimental <span>(SPDY)</span> - Speedy Protocol.</li>
+                <li>Though HTTP 1.1 was <span>much faster</span> than HTTP 1, it had some problems, most importantly, it was not making use of <span>TCP connection</span> completely.</li>
+                <li>Each connrction was sending <span>one request</span> at a time.</li>
+                <li>This problem was <span>solved</span> in Http 2 and <span> multiple concurrent</span> requests could be sent.</li>
+                <li>It allows servers to "<span>push</span>" responses into client caches <span>proactively.</span></li>
+                <li>It is fully <span>multiplexed.</span></li>
+                <li>It is <span>binary</span> and <span>not textual.</span></li>
+                <li>It uses <span>header compression</span>  in order to reduce overhead</li>
+              </ul>
+              <img src="https://cloudyforsure.com/wp-content/uploads/2021/03/1-Page-2.png" alt="http 2 protocol">
+              <ul>
+                <li>It interleaves multiple requests/responses in <span>parallel</span> without blocking on anyone.</li>
+                <li>It uses a single TCP connection to deliver <span>multiple</span> requests/responses (in parallel).</li>
+              </ul>
+          </div>
+        </section>
+        <!-- Sub topic 4 - End -->
+        <!-- Sub Topic 5 - Start -->
+        <section class="section4">
+          <h3>STEAMS</h3>
+          <div class="container">
+              <ul class="myUL">
+                <li>To achieve this parallel request over a <span> single</span> HTTP connection, HTTP 2 uses the concept of streams.</li>
+                <li>That is, each request being sent from the client has a <span>unique stream</span> id attached behind the scenes.</li>
+                <li>This helps the client and server identify the <span>calling</span> and <span>receiving</span> endpoints.</li>
+                <li>One can think of each stream as an <span>independent</span> channel for communication.</li>
+              </ul>
+              <img src="https://cloudyforsure.com/wp-content/uploads/2021/03/TCP.png" alt="streams">
+              <ul>
+                <li>It is less <span>error-prone</span> than HTTP/1.</li>
+                <li>It removes unnecessary <span>HTTP/1.x</span> workarounds.</li>
+              </ul>
+
+              <div class="container">
+                <h4><b>Example:</b></h4>
+            <ul style="list-style-type:circle">
+              <li>Image Sprites</li>
+              <li>Domain Sharing</li>
+            </ul>
+          </div>
+          </div>
+        </section>
+        <!-- Sub Topic 4 End (Question 1 Over) -->
+    <br>
+<!-- ---------------------------------over -------------------------->
+    <!-- Question 2 (Start) -->
+    <article id="question2">
+        <h2 class="head2"> <em style="color: white;">#2</em>
+          <u>Blog About Objects</u> and <u>It is Internal Representation</u> in <u>JavaScript</u>
+        </h2>
+        <i>"A JavaScript Object is a collection of named Values having state and behavior (properties and method)".</i>
+
+        <div class="container">
+          <h4><b>Example:</b></h4>
+      <ul style="list-style-type:circle">
+          <li>Person</li>
+          <li>Mobile Phone</li>
+          <li>Car</li>
+          <li>Pen</li>
+          <li>Tv</li>
+          <li>Personal Computer etc.</li>
+      </ul>
+      </div>
+      <div>
+        <p>Take the Case of <span>Mobile.</span></p>
+        
+        <p>All Mobile has the <span>same properties</span>, but the property values differ from Mobile to Mobile. All Mobile have the <span>same methods</span>, but the methods are performed at different times.</p>
+      </div>
+
+      <div>
+       <h4><u>Let's have an example of my mobile phone and list out its properties(Features):</u></h4>
+       <img src="./image/redmi_pic-removebg.png" alt="redmi 10">
+      </div>
+      <div>
+      <ul style="list-style-type: none;">
+        <li>&#9670; <b>Model:</b> Xiaomi Redmi 10</li>
+        <li>&#9670; <b>Version:</b> Android 11, MIUI 13</li>
+        <li>&#9670; <b>Color:</b> Caribbean Green</li>
+        <li>&#9670; <b>Battery:</b> 6000 mAh</li>
+      </ul>
+
+      <p>Taking the above as a reference, I'll stress up on <span>objects, Object Properties,</span> and <span>Methods.</span></p>
+      </div>
+      <!-- Object Start -->
+      <section class="Object">
+        <h3 class="head3">1. Objects</h3>
+        <i>Code assign asimple <span>value</span> (Xiaomi Redmi) to a <span>variable</span> named mobile:</i>
+       
+        <h4 id="one">let <b>mobile</b>="<b>xiaomi Redmi</b>";</h4>
+
+        <ul style="list-style-type:circle;">
+          <li>Objects are variables too. But objects can contain many values.</li>
+        </ul>
+        
+        <i>The following code assigns many values (<span>Xiaomi Redmi, MIUI 13, Caribbean Green,</span>and so on) to a <span>variable</span> named  Mobile:</i>
+
+        <h4 id="two">let <b>mobile</b>={Model:"<b>xiaomi Redmi</b>", Version:"<b>MiUi 13</b>", Color:"<b>Caribbean Green</b>", Weight:"<b>603g</b>", Battery:"<b>6000 mAh</b>", Rating:<b>4.5</b>};</h4>
+        
+        <p>The values are written as name: <span>value pairs</span> (name and value separated by a <span>colon</span>)</p>
+      </section>
+      <!-- section 1 Objects - End -->
+      <!-- Section 2 Syntax - Start -->
+      <section class="Syntax">
+        <h3 class="head3">Syntax</h3>
+
+        <h4 id="three">let <<b>object-name</b>>={key1:"<b>value1</b>", key2:"<b>value2</b>",<b>.....</b> keyN:"<b>valueN</b>"};</h4>
+
+        <ul style="list-style-type: none;">
+          <li>&#9670;  JS objects is "<span>JavaScript objects are containers for named values</span>"</li>
+        </ul>
+         <!-- Section 2 Syntax - End -->
+         <!-- Section 3 Object Propert - Start -->
+      <section class="objectProperties">
+        <h3 class="head3">2. Object Properties</h3>
+
+        <ul>
+          <li> The Name: <span>values pairs </span>(in JavaScript objects) are called <span>properties.</span></li>
+        </ul>
+
+        <h4 id="two">let <b>mobile</b>={Model:"<b>xiaomi Redmi</b>", Version:"<b>MiUi 13</b>", Color:"<b>Caribbean Green</b>", Weight:"<b>603g</b>", Battery:"<b>6000 mAh</b>", Rating:<b>4.5</b>};</h4>
+        <ul>
+          <li> The object properties can be different <span>primitive values, other objects,</span> and <span>functions.</span></li>
+          <li> Properties can usually be <span>changed, added,</span> and <span>deleted</span>, but some are <span>read-only.</span></li>
+        </ul>
+        
+        <ul>
+          <li class="list1">&#9670; The syntax for <span>Adding a property</span> to an object is : </li>
+        </ul>
+
+        <h4 id="four">Object<b>Name</b>.Object<b>Property = </b>Property<b>Values</b>;</h4>
+
+        <ul>
+          <li class="list1">&#9670; The syntax for <span>Deleting a property</span> from an object is : </li>
+        </ul>
+
+        <h4 id="four">delete<b> ObjectName.ObjectProperty</b>;</h4>
+
+        <ul>
+          <li class="list1">&#9670; The syntax to <span>Access a property</span> from an object is :</li>
+        </ul>
+
+        <h4 id="four">objectName<b>.property &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </b>// <b>Mobile.Model</b></h4>
+        
+        <h4 id="four">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // <b>or</b></h4>
+       
+        <h4 id="four">objectName<b>["property"]  &nbsp; </b>// <b>Mobile</b>["<b>Model</b>"]</h4>
+        
+        <h4 id="four">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // <b>or</b></h4>
+      
+        <h4 id="four">objectName<b>[expression]  &nbsp;&nbsp;&nbsp;</b>// x<b> = </b>"<b>Model</b>";<b> Mobile</b>[<b>x</b>]</h4>
+        
+        <div id="para1">
+        <p>JavaScript properties is "<span>Properties are the values associated with a JavaScript object</span>"</p>
+        </div>
+      </section>
+      <!-- Section 3 Object Propert - End -->
+      <!-- Section 4 Object Method - Start -->
+      <section class="objectMethod">
+        <h3 class="head3">3. Object methods</h3>
+
+        <ul>
+          <li>An object method is an object property containing a function definition</li>
+          <li>Let's assume to start the car there will be a mechanical functionality.</li>
+        </ul>
+
+        <h4 id="one">function<b>()</b>{<b>return ignition.on</b>}</h4>
+
+        <ul>
+          <li>and so similar is to stop/brake/headlights on & off, etc.</li>
+        </ul>
+
+        <div id="para1">
+          <p>So, the Conclusion <span>JavaScript Object methods</span> are "<span>Methods are actions that can be performed on objects</span>".</p> 
+        </div>
+      </section>
+      <!-- Section 4 Object Method - Start -->
+    </article>
+     <!-- First Task (End) -->
+  </body>
+</html>

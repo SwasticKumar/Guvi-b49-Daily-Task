@@ -1,0 +1,100 @@
+* {
+  background-color: black;
+  /*color: #555555;*/
+  color: #666666;
+  padding: 1px;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  color: #444;
+  text-align: center;
+}
+section > h3 {
+  text-align: center;
+  color: wheat;
+}
+ul,
+i {
+  /* display: inline-block;
+    text-align: left; */
+  position: relative;
+  padding-left: 10%;
+  margin: 30px;
+}
+li {
+  position: relative;
+  padding: 10px;
+}
+p {
+  position: relative;
+  padding-left: 7%;
+}
+em {
+  position: relative;
+  padding-left: 5%;
+}
+img {
+  width: 50%;
+  align-items: center;
+  text-align: justify;
+  position: relative;
+  padding-left: 25%;
+}
+/* class */
+.title {
+  background-color: #666666;
+  text-align: center;
+}
+.or {
+  position: relative;
+}
+.head1 {
+  margin: 50px;
+  text-align: center;
+}
+.head2 {
+  margin: 50px;
+  text-align: center;
+  padding-bottom: 5%;
+}
+.head3 {
+  margin: 30px;
+}
+.list1 {
+  list-style-type: none;
+  padding: 1%;
+}
+/* Id */
+#para1 {
+  position: relative;
+  padding: 10px 0px 10px;
+}
+#one {
+  position: relative;
+  padding-left: 43%;
+}
+#two {
+  position: relative;
+  padding-left: 15%;
+  margin: 30px;
+}
+#three {
+  position: relative;
+  padding-left: 30%;
+}
+#four {
+  position: relative;
+  padding-left: 35%;
+}
+h4 {
+  padding-left: 7%;
+  color: #999;
+}
+b {
+  color: #ff9900;
+}
+span {
+  color: #4a86e8;
+}
