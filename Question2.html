@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 2</title>
+    <style>
+      * {
+        background-color: black;
+      }
+      h1 {
+        text-align: center;
+        color: wheat;
+      }
+      #green {
+        color: green;
+      }
+      #orange {
+        color: orange;
+      }
+      h2 {
+        color: #888;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <span id="orange">Day 3 </span>Task <span id="green">Question 2</span>
+    </h1>
+    <h2>Display All the Country Flags in Console</h2>
+    <script>
+      function reqListener() {
+        let data = JSON.parse(this.responseText);
+        console.log(data);
+
+        for (let i of data) {
+          console.log(i.flags.png);
+        }
+      }
+      const req = new XMLHttpRequest();
+      req.addEventListener("load", reqListener);
+      req.open("GET", "https://restcountries.com/v3.1/all");
+      req.send();
+    </script>
+  </body>
+</html>
