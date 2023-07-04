@@ -1,6 +1,6 @@
 // Return median of two sorted arrays of the same size.
 
-let getMedian = (ar1, ar2, n) => {
+let getMedian = function (ar1, ar2, n) {
   let j = 0;
   let i = n - 1;
   while (ar1[i] > ar2[j] && j < n && i > -1) {
@@ -24,5 +24,5 @@ let ar2 = [2, 13, 17, 30, 45];
 
 let n1 = 5;
 let n2 = 5;
-if (n1 == n2) console.log("Median is " + getMedian(ar1, ar2, n1));
-else console.log("Doesn't work for arrays of unequal size");
+if (n1 == n2) console.log(`Median is ${getMedian(ar1, ar2, n1)}`);
+else console.log(`Doesn't work for arrays of unequal size`);
