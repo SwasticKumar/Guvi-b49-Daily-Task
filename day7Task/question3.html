@@ -14,12 +14,16 @@
         text-align: center;
         color: wheat;
       }
-      #green {
+      .green {
         color: green;
       }
-      #orange {
+      .orange {
         color: orange;
       }
+      .blue {
+        color: #1673ba;
+      }
+
       h2 {
         color: #888;
         text-align: center;
@@ -28,22 +32,27 @@
   </head>
   <body>
     <h1>
-      <span id="orange">Day 3 </span>Task <span id="green">Question 3</span>
+      <span class="orange">Day 7 </span>Task
+      <span class="green">Question 3</span>
     </h1>
-    <h2>Display All Countries Names, Regions, Sub-region and Populations</h2>
+    <h2>
+      Print the Following Details <span class="blue">Name</span>,
+      <span class="blue">Capital</span>, <span class="blue">Flag</span> using
+      forEach function
+    </h2>
     <script>
       function reqListener() {
         let data = JSON.parse(this.responseText);
         console.log(data);
 
-        for (let i in data) {
+        //ForEach:
+        Object.keys(data).forEach((value) => {
           console.log(
-            data[i].name.common,
-            data[i].region,
-            data[i].subregion,
-            data[i].population
+            `Name:${data[value].name.common}`,
+            `Capital:${data[value].capital}`,
+            `Flags:${data[value].flags.png}`
           );
-        }
+        });
       }
       const req = new XMLHttpRequest();
       req.addEventListener("load", reqListener);

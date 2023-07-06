@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 5</title>
+    <style>
+      * {
+        background-color: black;
+      }
+      h1 {
+        padding-top: 15%;
+        text-align: center;
+        color: wheat;
+      }
+      .red {
+        color: #bf0a30;
+      }
+      .blue {
+        color: #002868;
+      }
+      h2 {
+        color: #888;
+        text-align: center;
+      }
+      #blue {
+        font-weight: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <span class="blue">Day 7 </span>Task <span class="red">Question 5</span>
+    </h1>
+    <h2>
+      Print the country which uses U<span style="color: wheat">$</span> Dollars
+      as currency
+    </h2>
+    <script>
+      function reqListener() {
+        let data = JSON.parse(this.responseText);
+        console.log(data);
+
+        // ForEach():
+        for (let i in data) {
+          if (data[i].currencies != undefined) {
+            Object.keys(data[i].currencies).forEach((key) => {
+              if (key == "USD") {
+                console.log(key, data[i].currencies[key]);
+              }
+            });
+          }
+        }
+      }
+      const xhr = new XMLHttpRequest();
+      xhr.addEventListener("load", reqListener);
+      xhr.open("GET", "https://restcountries.com/v3.1/all");
+      xhr.send();
+    </script>
+  </body>
+</html>

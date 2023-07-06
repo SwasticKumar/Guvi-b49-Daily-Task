@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question 3</title>
+    <title>Question 4</title>
     <style>
       * {
         background-color: black;
@@ -14,12 +14,16 @@
         text-align: center;
         color: wheat;
       }
-      #green {
+      .green {
         color: green;
       }
-      #orange {
+      .orange {
         color: orange;
       }
+      .red {
+        color: #bf0a30;
+      }
+
       h2 {
         color: #888;
         text-align: center;
@@ -28,22 +32,22 @@
   </head>
   <body>
     <h1>
-      <span id="orange">Day 3 </span>Task <span id="green">Question 3</span>
+      <span class="orange">Day 7 </span>Task
+      <span class="green">Question 4</span>
     </h1>
-    <h2>Display All Countries Names, Regions, Sub-region and Populations</h2>
+    <h2>
+      Print the Total Population of Countries using
+      <span class="red">Reduce</span> function
+    </h2>
     <script>
       function reqListener() {
         let data = JSON.parse(this.responseText);
         console.log(data);
 
-        for (let i in data) {
-          console.log(
-            data[i].name.common,
-            data[i].region,
-            data[i].subregion,
-            data[i].population
-          );
-        }
+        //Reduce Method():
+        Object.keys(data).reduce((previous, key) => {
+          console.log(`Total Population: ${data[key].population}`);
+        }, 0);
       }
       const req = new XMLHttpRequest();
       req.addEventListener("load", reqListener);
