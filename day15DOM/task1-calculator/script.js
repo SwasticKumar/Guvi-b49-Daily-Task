@@ -1,59 +1,35 @@
-// Rule: Alert message of Press other than Number Key
-document.onkeydown = onlynumkey;
-function onlynumkey(evt) {
+document.onkeydown = isNumberKey;
+function isNumberKey(evt) {
   const charCode = evt.which ? evt.which : evt.keyCode;
-  if (charCode !== 8 && charCode !== 13 && (charCode < 48 || charCode > 57)) {
+  if (
+    charCode !== 8 && // Allow backspace
+    charCode !== 13 && // Allow enter key
+    (charCode < 48 || charCode > 57) // Check if the pressed key is not a number
+  ) {
     alert("Only numbers are allowed");
     evt.preventDefault();
   }
 }
 
-// DOM
-document.addEventListener("DOMContentLoaded", function (event) {
-  let body = document.querySelector("body");
-  let result = document.querySelector("#result");
+// Attach the isNumberKey function to the onkeydown event of the document
 
-  let clear = document.querySelector("#clear");
-  let history = document.querySelector("#history");
-  let equalTo = document.querySelector("#equalTo");
-  let delete_single_num = document.querySelector("#delete_single_num");
+let div = document.createElement("div");
+document.body.append(div);
+let outputScreen = document.getElementById("result");
 
-  let Normal_btn = document.querySelectorAll("#Normal_btn");
-
-  let initial_value = "";
-
-  // Loop the clicking button to display
-  Normal_btn.forEach((Normal_btn, index) => {
-    Normal_btn.addEventListener("click", function () {
-      let text = this.innerHTML;
-      initial_value += text;
-      result.innerHTML = initial_value;
-    });
-  });
-
-  /*equal to button action*/
-  equalTo.addEventListener("click", function () {
-    if (result.innerHTML != "") {
-      history.innerHTML = result.innerHTML;
-      result.innerHTML = eval(result.innerHTML);
-      initial_value = eval(result.innerHTML);
-    } else {
-      alert("please enter any Number");
-    }
-  });
-
-  /*clear all number*/
-  clear.addEventListener("click", function () {
-    result.innerHTML = "";
-    initial_value = "";
-  });
-
-  /*delete single number*/
-  delete_single_num.addEventListener("click", function () {
-    result.innerHTML = result.innerHTML.substring(
-      0,
-      result.innerHTML.length - 1
-    );
-    initial_value = result.innerHTML;
-  });
-});
+function display(num) {
+  outputScreen.value += num;
+}
+function Calculate() {
+  try {
+    outputScreen.value = eval(outputScreen.value);
+  } catch (err) {
+    alert("Invalid");
+  }
+}
+function Clear() {
+  outputScreen.value = "";
+}
+function del() {
+  outputScreen.value = outputScreen.value.slice(0, -1);
+}
