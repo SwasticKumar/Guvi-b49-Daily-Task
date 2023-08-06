@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <!-- Bootstrap CND -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--CSS -->
+    <style>
+      video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+      #container {
+        background-color: #63d471;
+        background-image: linear-gradient(315deg, #63d471 0%, #233329 60%);
+        border-radius: 40px;
+        opacity: 0.9;
+      }
+      button {
+        border-radius: 59px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- BackGround Video -->
+    <video autoplay muted loop src="./video/bg1.mp4"></video>
+    <!-- Event in Function  -->
+    <form onsubmit="event.preventDefault(); convertPrice();">
+      <!-- container -->
+      <div
+        class="container d-flex flex-wrap flex-column col-10 justify-content-center mt-5"
+        id="container"
+      >
+        <!-- Title Head -->
+        <h1 class="bg-transparent text-center text-white font-italic mt-4">
+          Online Currency Converter
+        </h1>
+        <!-- Value Input -->
+        <input
+          class="form-control mt-4"
+          placeholder="Enter The Amount"
+          type="number"
+          name="amount"
+          id="amount"
+          min="0.01"
+          step="0.01"
+          oninput="validity.valid||(value='');"
+          required
+        />
+        <!-- From -->
+        <label class="text-white font-weight-bold" for="currency1"
+          >Select Your Currency:</label
+        >
+        <select
+          class="form-control form-control-sm"
+          name="currency1"
+          id="currency1"
+        >
+          <option value="" class="" disabled selected>Select a currency</option>
+        </select>
+
+        <!-- To -->
+        <label class="text-white font-weight-bold" for="currency2"
+          >Convert To:</label
+        >
+        <select
+          class="form-control form-control-sm mb-4"
+          name="currency2"
+          id="currency2"
+        >
+          <option value="" disabled selected>Select a currency</option>
+        </select>
+
+        <!-- Convert (Button) -->
+        <button class="btn-success btn-lg btn-block" type="submit">
+          CONVERT
+        </button>
+
+        <!-- Result (value in text) -->
+        <h2
+          id="result"
+          class="mt-3 text-white text-center font-weight-bold"
+          style="background: #233329; border-radius: 20px"
+        ></h2>
+      </div>
+    </form>
+
+    <!-- Javascript Source -->
+    <script src="script.js"></script>
+  </body>
+</html>
